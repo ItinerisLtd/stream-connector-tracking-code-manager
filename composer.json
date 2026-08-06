@@ -1,0 +1,80 @@
+{
+  "name": "itinerisltd/stream-connector-tracking-code-manager",
+  "description": "Tracking code activity connector for Stream (Tracking Code Manager)",
+  "license": "MIT",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "Itineris Limited",
+      "email": "dev@itineris.co.uk",
+      "homepage": "https://itineris.co.uk/",
+      "role": "Company"
+    },
+    {
+      "name": "Lee Hanbury-Pickett",
+      "email": "lee.hanbury@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "homepage": "https://github.com/itinerisltd/stream-connector-tracking-code-manager/",
+  "support": {
+    "email": "dev@itineris.co.uk",
+    "issues": "https://github.com/ItinerisLtd/stream-connector-tracking-code-manager/issues",
+    "source": "https://github.com/ItinerisLtd/stream-connector-tracking-code-manager"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": [
+        "wpackagist-plugin/*",
+        "wpackagist-theme/*"
+      ]
+    }
+  ],
+  "require": {
+    "php": "^8.4"
+  },
+  "require-dev": {
+    "itinerisltd/itineris-wp-coding-standards": "^1.0",
+    "roots/wordpress": "^7.0",
+    "wpackagist-plugin/tracking-code-manager": "^2.6",
+    "xwp/stream": "^4.0"
+  },
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "roots/wordpress-core-installer": true,
+      "composer/installers": true
+    },
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "extra": {
+    "installer-paths": {
+      "wordpress/wp-content/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "wordpress/wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "wordpress/wp-content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    },
+    "branch-alias": {
+      "dev-master": "0.1.x-dev"
+    }
+  },
+  "scripts": {
+    "style:check": "phpcs",
+    "style:fix": "phpcbf"
+  },
+  "autoload": {
+    "psr-4": {
+      "Itineris\\StreamConnectorTrackingCodeManager\\": "src/"
+    }
+  }
+}
