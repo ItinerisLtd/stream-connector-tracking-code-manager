@@ -25,22 +25,17 @@ class TrackingCodeManager extends Connector
     ];
 
     /**
-     * Connector slug
-     *
-     * @var string
+     * Set here, not redeclared: Stream 4.5 typed these properties, 4.4 did not.
      */
-    public $name = 'tracking-code-manager';
-
-    /**
-     * Actions registered for this connector
-     *
-     * @var array
-     */
-    public $actions = [
-        'added_option',
-        'updated_option',
-        'delete_option',
-    ];
+    public function __construct()
+    {
+        $this->name = 'tracking-code-manager';
+        $this->actions = [
+            'added_option',
+            'updated_option',
+            'delete_option',
+        ];
+    }
 
     public function get_label(): string
     {
