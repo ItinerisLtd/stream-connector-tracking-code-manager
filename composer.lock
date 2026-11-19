@@ -786,15 +786,15 @@
         },
         {
             "name": "wpackagist-plugin/tracking-code-manager",
-            "version": "2.7.0",
+            "version": "2.8.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/tracking-code-manager/",
-                "reference": "tags/2.7.0"
+                "reference": "tags/2.8.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/tracking-code-manager.2.7.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/tracking-code-manager.2.8.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
